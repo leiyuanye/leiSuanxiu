@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.flexbox.FlexboxLayout;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.weekend.enterprise.data.DataProvider;
 import com.weekend.enterprise.model.Company;
 import com.weekend.enterprise.model.Product;
@@ -77,7 +78,8 @@ public class ProductDetailActivity extends AppCompatActivity {
             flFeatures.addView(chip);
         }
 
-        findViewById(R.id.toolbar_product).setNavigationOnClickListener(v -> onBackPressed());
+        MaterialToolbar toolbar = findViewById(R.id.toolbar_product);
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
     }
 
     private int darker(int color) {
