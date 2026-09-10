@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">双休企业通</string>
+    <string name="search_hint">搜索企业名称或产品</string>
+    <string name="weekend_certified">双休认证</string>
+    <string name="title_home">首页</string>
+    <string name="title_category">分类</string>
+    <string name="title_favorites">收藏</string>
+    <string name="title_profile">我的</string>
+
+    <string name="tab_timeline">发展历程</string>
+    <string name="tab_products">产品信息</string>
+    <string name="tab_info">企业概况</string>
+
+    <string name="section_basic_info">基本信息</string>
+    <string name="section_work_system">工作制度</string>
+    <string name="section_company_intro">企业简介</string>
+    <string name="section_product_intro">产品介绍</string>
+    <string name="section_core_features">核心功能</string>
+
+    <string name="label_founded">成立时间</string>
+    <string name="label_hq">总部位置</string>
+    <string name="label_industry">所属行业</string>
+    <string name="label_size">企业规模</string>
+    <string name="label_ipo">上市状态</string>
+    <string name="label_work_hours">作息制度</string>
+    <string name="label_overtime">加班情况</string>
+    <string name="label_annual_leave">年假天数</string>
+
+    <string name="users_unit">用户</string>
+    <string name="monthly_active">月活用户</string>
+    <string name="user_rating">用户评分</string>
+    <string name="launch_year">上线年份</string>
+
+    <string name="filter_all">全部</string>
+    <string name="filter_internet">互联网</string>
+    <string name="filter_ecommerce">电子商务</string>
+    <string name="filter_social">社交娱乐</string>
+    <string name="filter_search">搜索引擎</string>
+    <string name="filter_game">游戏</string>
+
+    <string name="company_count_format">%d 家</string>
+    <string name="certified_companies">双休认证企业</string>
+
+    <string name="action_back">返回</string>
+    <string name="action_settings">设置</string>
+    <string name="action_favorite">收藏</string>
+</resources>

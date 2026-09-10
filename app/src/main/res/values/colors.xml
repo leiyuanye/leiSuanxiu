@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_primary">#006495</color>
+    <color name="md_primary_light">#6B98B8</color>
+    <color name="md_primary_dark">#003A5C</color>
+    <color name="md_on_primary">#FFFFFF</color>
+
+    <color name="md_secondary">#006A6A</color>
+    <color name="md_on_secondary">#FFFFFF</color>
+
+    <color name="md_background">#F6F3F7</color>
+    <color name="md_surface">#FFFBFE</color>
+    <color name="md_surface_variant">#E7E0E3</color>
+    <color name="md_on_surface">#1C1B1F</color>
+    <color name="md_on_surface_variant">#49454F</color>
+
+    <color name="md_outline">#79747E</color>
+    <color name="md_error">#BA1A1A</color>
+    <color name="md_success">#2E7D32</color>
+    <color name="md_warning">#ED6C02</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="semi_black">#80000000</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="chip_bg">#E8F5E9</color>
+    <color name="chip_border">#C8E6C9</color>
+    <color name="star_color">#FFB300</color>
+    <color name="card_divider">#1F000000</color>
+</resources>

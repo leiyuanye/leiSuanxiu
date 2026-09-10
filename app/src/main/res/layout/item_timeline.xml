@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp"
+    android:paddingBottom="24dp">
+
+    <View
+        android:id="@+id/view_timeline_dot"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="0dp"
+        android:background="@drawable/timeline_dot" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_timeline_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="1998" />
+
+        <TextView
+            android:id="@+id/tv_timeline_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/md_on_surface"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="腾讯成立" />
+
+        <TextView
+            android:id="@+id/tv_timeline_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/md_on_surface_variant"
+            android:textSize="13sp"
+            tools:text="马化腾等五位创始人在深圳创立腾讯计算机系统有限公司" />
+    </LinearLayout>
+</LinearLayout>
