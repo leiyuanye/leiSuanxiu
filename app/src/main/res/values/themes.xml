@@ -9,7 +9,6 @@
         <item name="colorOnSecondary">@color/md_on_secondary</item>
         <item name="colorSurface">@color/md_surface</item>
         <item name="colorOnSurface">@color/md_on_surface</item>
-        <item name="colorBackground">@color/md_background</item>
         <item name="android:colorBackground">@color/md_background</item>
         <item name="android:statusBarColor">@color/md_primary</item>
         <item name="android:navigationBarColor">@color/md_surface</item>
