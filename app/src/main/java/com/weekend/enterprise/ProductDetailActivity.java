@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.flexbox.FlexboxLayout;
+import com.google.android.flexbox.FlexboxLayout;
 import com.weekend.enterprise.data.DataProvider;
 import com.weekend.enterprise.model.Company;
 import com.weekend.enterprise.model.Product;

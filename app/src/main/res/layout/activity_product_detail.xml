@@ -222,7 +222,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <com.google.android.material.flexbox.FlexboxLayout
+            <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/fl_features"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
