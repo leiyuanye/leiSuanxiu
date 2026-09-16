@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "淘宝闪购联盟 Cookie 获取工具",
+  "version": "1.0.0",
+  "description": "自动获取淘宝闪购联盟平台的 Cookie 信息，支持复制和导出",
+  "permissions": [
+    "cookies",
+    "tabs",
+    "storage",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "notifications"
+  ],
+  "host_permissions": [
+    "*://*.taobao.com/*",
+    "*://*.tb.cn/*",
+    "*://*.tmall.com/*",
+    "*://*.alibaba.com/*",
+    "*://*.alicdn.com/*",
+    "*://*.aliyun.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.taobao.com/*",
+        "*://*.tb.cn/*",
+        "*://*.tmall.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

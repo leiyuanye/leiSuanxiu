@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>淘宝闪购联盟 Cookie 工具</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="header-title">
+      <span class="logo-icon">🍪</span>
+      <span>Cookie 获取工具</span>
+    </div>
+    <div class="status-badge" id="statusBadge">等待中</div>
+  </div>
+
+  <div class="content">
+    <!-- 当前页面状态 -->
+    <div class="page-info" id="pageInfo">
+      <div class="page-info-row">
+        <span class="label">当前页面:</span>
+        <span class="value" id="currentPage">-</span>
+      </div>
+      <div class="page-info-row">
+        <span class="label">Cookie 数量:</span>
+        <span class="value" id="cookieCount">0</span>
+      </div>
+      <div class="page-info-row">
+        <span class="label">捕获时间:</span>
+        <span class="value" id="captureTime">-</span>
+      </div>
+    </div>
+
+    <!-- 操作按钮 -->
+    <div class="actions">
+      <button id="btnCapture" class="btn btn-primary">
+        <span class="btn-icon">📷</span>
+        手动获取 Cookie
+      </button>
+      <button id="btnCopyString" class="btn btn-secondary" disabled>
+        <span class="btn-icon">📋</span>
+        复制 Cookie 字符串
+      </button>
+      <button id="btnCopyJSON" class="btn btn-secondary" disabled>
+        <span class="btn-icon">📄</span>
+        复制 JSON 格式
+      </button>
+      <button id="btnExport" class="btn btn-secondary" disabled>
+        <span class="btn-icon">💾</span>
+        导出文件
+      </button>
+    </div>
+
+    <!-- Cookie 列表 -->
+    <div class="cookie-list-container" id="cookieListContainer" style="display:none;">
+      <div class="section-title">
+        <span>Cookie 详情</span>
+        <button id="btnToggleView" class="btn-toggle">切换视图</button>
+      </div>
+      <div class="cookie-list" id="cookieList">
+      </div>
+    </div>
+
+    <!-- Cookie 字符串预览 -->
+    <div class="cookie-string-container" id="cookieStringContainer" style="display:none;">
+      <div class="section-title">
+        <span>Cookie 字符串</span>
+      </div>
+      <textarea id="cookieStringArea" readonly></textarea>
+    </div>
+
+    <!-- 空状态 -->
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">🔍</div>
+      <p>请打开淘宝闪购联盟平台网页</p>
+      <p class="empty-hint">插件将自动捕获 Cookie</p>
+    </div>
+
+    <!-- 错误提示 -->
+    <div class="error-msg" id="errorMsg" style="display:none;"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
