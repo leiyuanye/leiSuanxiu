@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>淘宝闪购联盟 Cookie 工具</title>
+  <title>Cookie 获取工具</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
@@ -11,7 +11,10 @@
       <span class="logo-icon">🍪</span>
       <span>Cookie 获取工具</span>
     </div>
-    <div class="status-badge" id="statusBadge">等待中</div>
+    <div class="header-actions">
+      <div class="status-badge" id="statusBadge">等待中</div>
+      <button id="btnSettings" class="btn-settings" title="设置">⚙</button>
+    </div>
   </div>
 
   <div class="content">
@@ -31,19 +34,32 @@
       </div>
     </div>
 
+    <!-- 已配置域名预览 -->
+    <div class="domain-preview" id="domainPreview">
+      <div class="domain-preview-head">
+        <span>已配置域名 (<span id="domainPreviewCount">0</span>)</span>
+        <button id="btnManageDomains" class="btn-manage">管理</button>
+      </div>
+      <div class="domain-tags" id="domainTags"></div>
+    </div>
+
     <!-- 操作按钮 -->
     <div class="actions">
       <button id="btnCapture" class="btn btn-primary">
         <span class="btn-icon">📷</span>
         手动获取 Cookie
       </button>
+      <button id="btnAddSite" class="btn btn-accent">
+        <span class="btn-icon">➕</span>
+        添加当前网站
+      </button>
       <button id="btnCopyString" class="btn btn-secondary" disabled>
         <span class="btn-icon">📋</span>
-        复制 Cookie 字符串
+        复制字符串
       </button>
       <button id="btnCopyJSON" class="btn btn-secondary" disabled>
         <span class="btn-icon">📄</span>
-        复制 JSON 格式
+        复制 JSON
       </button>
       <button id="btnExport" class="btn btn-secondary" disabled>
         <span class="btn-icon">💾</span>
@@ -72,8 +88,8 @@
     <!-- 空状态 -->
     <div class="empty-state" id="emptyState">
       <div class="empty-icon">🔍</div>
-      <p>请打开淘宝闪购联盟平台网页</p>
-      <p class="empty-hint">插件将自动捕获 Cookie</p>
+      <p>请打开已配置的网站</p>
+      <p class="empty-hint">或点击「添加当前网站」将当前页面加入捕获列表</p>
     </div>
 
     <!-- 错误提示 -->

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "淘宝闪购联盟 Cookie 获取工具",
-  "version": "1.0.0",
-  "description": "自动获取淘宝闪购联盟平台的 Cookie 信息，支持复制和导出",
+  "name": "Cookie 获取工具（可自定义网站）",
+  "version": "2.0.0",
+  "description": "自定义捕获任意网站的 Cookie 信息，支持自动监听、手动获取、复制和导出",
   "permissions": [
     "cookies",
     "tabs",
@@ -13,15 +13,14 @@
     "notifications"
   ],
   "host_permissions": [
-    "*://*.taobao.com/*",
-    "*://*.tb.cn/*",
-    "*://*.tmall.com/*",
-    "*://*.alibaba.com/*",
-    "*://*.alicdn.com/*",
-    "*://*.aliyun.com/*"
+    "<all_urls>"
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   },
   "action": {
     "default_popup": "popup.html",
@@ -38,11 +37,7 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://*.taobao.com/*",
-        "*://*.tb.cn/*",
-        "*://*.tmall.com/*"
-      ],
+      "matches": ["<all_urls>"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Cookie 获取工具 - 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="header">
+    <span class="logo-icon">🍪</span>
+    <h1>Cookie 获取工具 - 设置</h1>
+  </div>
+
+  <div class="container">
+    <!-- 网站域名管理 -->
+    <section class="card">
+      <div class="card-header">
+        <h2>捕获网站管理</h2>
+        <span class="card-desc">添加或删除需要捕获 Cookie 的网站域名（支持泛域名，如 taobao.com 会匹配 *.taobao.com）</span>
+      </div>
+
+      <div class="input-row">
+        <input type="text" id="domainInput" placeholder="输入域名，如 example.com" />
+        <button id="btnAddDomain" class="btn-add">添加</button>
+      </div>
+
+      <div class="domain-list-wrapper">
+        <div class="domain-list-head">
+          <span>已配置域名 (<span id="domainCount">0</span>)</span>
+          <button id="btnRestoreDefault" class="btn-restore">恢复默认</button>
+        </div>
+        <div class="domain-list" id="domainList">
+        </div>
+      </div>
+    </section>
+
+    <!-- 捕获选项 -->
+    <section class="card">
+      <div class="card-header">
+        <h2>捕获选项</h2>
+      </div>
+
+      <div class="option-row">
+        <div class="option-info">
+          <span class="option-title">自动捕获</span>
+          <span class="option-desc">页面加载完成后自动获取 Cookie</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggleAutoCapture" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="option-row">
+        <div class="option-info">
+          <span class="option-title">桌面通知</span>
+          <span class="option-desc">Cookie 捕获成功后显示通知</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggleNotification" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- 导入导出配置 -->
+    <section class="card">
+      <div class="card-header">
+        <h2>配置导入/导出</h2>
+        <span class="card-desc">备份或迁移你的域名配置</span>
+      </div>
+      <div class="action-row">
+        <button id="btnExportConfig" class="btn-export">导出配置</button>
+        <button id="btnImportConfig" class="btn-import">导入配置</button>
+        <input type="file" id="importFile" accept=".json" style="display:none;" />
+      </div>
+    </section>
+
+    <!-- 提示 -->
+    <div class="tips">
+      <p>提示：</p>
+      <ul>
+        <li>输入主域名即可，如 <code>taobao.com</code> 会自动匹配 <code>www.taobao.com</code>、<code>login.taobao.com</code> 等</li>
+        <li>修改配置后即时生效，无需刷新页面</li>
+        <li>在插件弹窗中也可快速添加当前网站</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
